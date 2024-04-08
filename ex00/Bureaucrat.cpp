@@ -6,12 +6,13 @@
 /*   By: sbouheni <sbouheni@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 12:46:46 by sbouheni          #+#    #+#             */
-/*   Updated: 2024/04/08 18:52:29 by sbouheni         ###   ########.fr       */
+/*   Updated: 2024/04/09 00:54:52 by sbouheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 
+// Constructors
 Bureaucrat::Bureaucrat()
     : name("Undefined"), grade(150)
 {
@@ -30,17 +31,20 @@ Bureaucrat::Bureaucrat(const Bureaucrat &other)
     std::cout << "Bureaucrat " << this->name << " copied\n";
 }
 
+// Assignation operator
 Bureaucrat &Bureaucrat::operator=(const Bureaucrat &other)
 {
     this->grade = other.grade;
     return *this;
 }
 
+//Destructor
 Bureaucrat::~Bureaucrat()
 {
     std::cout << "Bureaucrat " << name << " destroyed\n";
 }
 
+// Getters
 const std::string Bureaucrat::getName() const
 {
     return this->name;
