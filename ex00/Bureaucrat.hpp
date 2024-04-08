@@ -6,7 +6,7 @@
 /*   By: sbouheni <sbouheni@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 12:46:52 by sbouheni          #+#    #+#             */
-/*   Updated: 2024/04/09 00:55:02 by sbouheni         ###   ########.fr       */
+/*   Updated: 2024/04/09 00:55:32 by sbouheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,9 @@ class Bureaucrat
         // Getters
         const std::string getName() const;
         int getGrade() const;
+        
+        void incrementGrade();
+        void decrementGrade();
 };
 
 #endif
