@@ -6,7 +6,7 @@
 /*   By: sbouheni <sbouheni@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 12:46:46 by sbouheni          #+#    #+#             */
-/*   Updated: 2024/04/09 00:58:12 by sbouheni         ###   ########.fr       */
+/*   Updated: 2024/04/09 01:18:40 by sbouheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,10 +57,10 @@ int Bureaucrat::getGrade() const
 
 void Bureaucrat::incrementGrade()
 {
-    this->grade++;
+    this->grade--;
 }
 
 void Bureaucrat::decrementGrade()
 {
-    this->grade--;
+    this->grade++;
 }
