@@ -6,7 +6,7 @@
 /*   By: sbouheni <sbouheni@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 12:46:46 by sbouheni          #+#    #+#             */
-/*   Updated: 2024/04/09 00:57:25 by sbouheni         ###   ########.fr       */
+/*   Updated: 2024/04/09 00:58:12 by sbouheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ Bureaucrat &Bureaucrat::operator=(const Bureaucrat &other)
     return *this;
 }
 
-//Destructor
+// Destructor
 Bureaucrat::~Bureaucrat()
 {
     std::cout << "Bureaucrat " << name << " destroyed\n";
@@ -57,7 +57,7 @@ int Bureaucrat::getGrade() const
 
 void Bureaucrat::incrementGrade()
 {
-    this->grade ++;
+    this->grade++;
 }
 
 void Bureaucrat::decrementGrade()
