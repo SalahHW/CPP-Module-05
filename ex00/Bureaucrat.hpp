@@ -6,7 +6,7 @@
 /*   By: sbouheni <sbouheni@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 12:46:52 by sbouheni          #+#    #+#             */
-/*   Updated: 2024/04/09 00:58:19 by sbouheni         ###   ########.fr       */
+/*   Updated: 2024/04/10 17:07:26 by sbouheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #define BUREAUCRAT_HPP
 
 #include <iostream>
+#include <exception>
 
 class Bureaucrat
 {
@@ -34,7 +35,22 @@ public:
     ~Bureaucrat();
 
     // Exceptions
-
+    class GradeTooHighException: public std::exception
+    {
+        virtual const char* what() const throw()
+        {
+            return ("Grade too high !");
+        }
+    };
+    
+    class GradeTooLowException: public std::exception
+    {
+        virtual const char * what() const throw()
+        {
+            return ("Grade too low !");
+        }
+    };
+    
     // Getters
     const std::string getName() const;
     int getGrade() const;
