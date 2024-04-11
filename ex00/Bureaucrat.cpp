@@ -6,7 +6,7 @@
 /*   By: sbouheni <sbouheni@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 12:46:46 by sbouheni          #+#    #+#             */
-/*   Updated: 2024/04/10 15:31:36 by sbouheni         ###   ########.fr       */
+/*   Updated: 2024/04/11 04:30:00 by sbouheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,4 +71,14 @@ void Bureaucrat::decrementGrade()
     if (grade == 150)
         throw Bureaucrat::GradeTooLowException();
     this->grade++;
+}
+
+std::ostream &operator<<(std::ostream &output_stream, const Bureaucrat &bureaucrat)
+{
+    output_stream << bureaucrat.getName()
+                  << ", bureaucrat grade "
+                  << bureaucrat.getGrade()
+                  << "."
+                  << std::endl;
+    return (output_stream);
 }
