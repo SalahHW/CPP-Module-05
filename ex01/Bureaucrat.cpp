@@ -6,7 +6,7 @@
 /*   By: sbouheni <sbouheni@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 12:46:46 by sbouheni          #+#    #+#             */
-/*   Updated: 2024/04/11 04:41:04 by sbouheni         ###   ########.fr       */
+/*   Updated: 2024/04/11 15:33:28 by sbouheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 Bureaucrat::Bureaucrat()
     : name("Undefined"), grade(150)
 {
-    std::cout << "Bureaucrat constructed\n";
+    std::cout << "Bureaucrat constructed" << std::endl;
 }
 
 Bureaucrat::Bureaucrat(const std::string &name, int grade)
@@ -26,13 +26,13 @@ Bureaucrat::Bureaucrat(const std::string &name, int grade)
         throw Bureaucrat::GradeTooHighException();
     else if (grade > 150)
         throw Bureaucrat::GradeTooLowException();
-    std::cout << "Bureaucrat " << this->name << " constructed\n";
+    std::cout << "Bureaucrat " << this->name << " constructed" << std::endl;
 }
 
 Bureaucrat::Bureaucrat(const Bureaucrat &other)
     : name(other.name), grade(other.grade)
 {
-    std::cout << "Bureaucrat " << this->name << " copied\n";
+    std::cout << "Bureaucrat " << this->name << " copied" << std::endl;
 }
 
 // Assignation operator
@@ -45,7 +45,7 @@ Bureaucrat &Bureaucrat::operator=(const Bureaucrat &other)
 // Destructor
 Bureaucrat::~Bureaucrat()
 {
-    std::cout << "Bureaucrat " << name << " destroyed\n";
+    std::cout << "Bureaucrat " << name << " destroyed" << std::endl;
 }
 
 // Getters
