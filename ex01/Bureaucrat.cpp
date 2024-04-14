@@ -6,11 +6,12 @@
 /*   By: sbouheni <sbouheni@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 12:46:46 by sbouheni          #+#    #+#             */
-/*   Updated: 2024/04/11 15:33:28 by sbouheni         ###   ########.fr       */
+/*   Updated: 2024/04/15 01:48:14 by sbouheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 // Constructors
 Bureaucrat::Bureaucrat()
@@ -73,6 +74,29 @@ void Bureaucrat::decrementGrade()
         throw Bureaucrat::GradeTooLowException();
     this->grade++;
     std::cout << this->name << " grade have been decremented" << std::endl;
+}
+
+void Bureaucrat::signForm(Form &form) const
+{
+    try
+    {
+        form.beSigned(*this);
+        std::cout << this->getName()
+        << " signed "
+        << form.getName()
+        << "."
+        << std::endl;
+    }
+    catch (const std::exception &e)
+    {
+        std::cerr << this->getName()
+                  << " couldn't sign "
+                  << form.getName()
+                  << " because "
+                  << e.what()
+                  << "."
+                  << std::endl;
+    }
 }
 
 std::ostream &operator<<(std::ostream &output_stream, const Bureaucrat &bureaucrat)
