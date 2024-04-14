@@ -6,7 +6,7 @@
 /*   By: sbouheni <sbouheni@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 15:14:41 by sbouheni          #+#    #+#             */
-/*   Updated: 2024/04/12 22:31:52 by sbouheni         ###   ########.fr       */
+/*   Updated: 2024/04/15 00:58:37 by sbouheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,14 @@ int Form::getGradeToExec() const
 bool Form::getSignStatus() const
 {
     return (this->is_signed);
+}
+
+void Form::beSigned(const Bureaucrat &bureaucrat)
+{
+    if (bureaucrat.getGrade() <= this->grade_to_sign)
+        this->is_signed = true;
+    else
+        throw GradeTooLowException();
 }
 
 std::ostream &operator<<(std::ostream &output_stream, const Form &form)

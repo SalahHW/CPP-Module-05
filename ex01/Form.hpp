@@ -6,13 +6,14 @@
 /*   By: sbouheni <sbouheni@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 15:14:27 by sbouheni          #+#    #+#             */
-/*   Updated: 2024/04/12 22:23:32 by sbouheni         ###   ########.fr       */
+/*   Updated: 2024/04/15 00:56:28 by sbouheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FORM_HPP
 #define FORM_HPP
 
+#include "Bureaucrat.hpp"
 #include <iostream>
 #include <exception>
 
@@ -49,6 +50,8 @@ public:
     int getGradeToSign() const;
     int getGradeToExec() const;
     bool getSignStatus() const;
+
+    void beSigned(const Bureaucrat &bureaucrat);
 };
 
 std::ostream &operator<<(std::ostream &output_stream, const Form &form);
