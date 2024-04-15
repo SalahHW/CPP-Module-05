@@ -6,7 +6,7 @@
 #    By: sbouheni <sbouheni@student.42mulhouse.fr>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/23 12:47:01 by sbouheni          #+#    #+#              #
-#    Updated: 2024/04/15 13:44:47 by sbouheni         ###   ########.fr        #
+#    Updated: 2024/04/15 18:23:21 by sbouheni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,8 @@ CXXFLAGS				=	-Wall -Wextra -Werror -std=c++98 -g -fsanitize=address
 
 SRCS					=	main.cpp									\
 							Bureaucrat.cpp								\
-							AForm.cpp
+							AForm.cpp									\
+							ShrubberyCreationForm.cpp					\
 
 OBJS					=	$(SRCS:.cpp=.o)
 
