@@ -52,6 +52,7 @@ public:
     bool getSignStatus() const;
 
     void beSigned(const Bureaucrat &bureaucrat);
+    virtual void execute(Bureaucrat const & executor) const = 0;
 };
 
 std::ostream &operator<<(std::ostream &output_stream, const AForm &form);
