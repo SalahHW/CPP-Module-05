@@ -6,7 +6,7 @@
 /*   By: sbouheni <sbouheni@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 12:46:52 by sbouheni          #+#    #+#             */
-/*   Updated: 2024/04/15 01:44:58 by sbouheni         ###   ########.fr       */
+/*   Updated: 2024/04/17 15:57:14 by sbouheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,18 +39,12 @@ public:
     // Exceptions
     class GradeTooHighException : public std::exception
     {
-        virtual const char *what() const throw()
-        {
-            return ("Grade too high !");
-        }
+        virtual const char *what() const throw();
     };
 
     class GradeTooLowException : public std::exception
     {
-        virtual const char *what() const throw()
-        {
-            return ("Grade too low !");
-        }
+        virtual const char *what() const throw();
     };
 
     // Getters

@@ -6,7 +6,7 @@
 /*   By: sbouheni <sbouheni@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 12:46:46 by sbouheni          #+#    #+#             */
-/*   Updated: 2024/04/15 01:48:14 by sbouheni         ###   ########.fr       */
+/*   Updated: 2024/04/17 15:58:30 by sbouheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,17 @@ Bureaucrat &Bureaucrat::operator=(const Bureaucrat &other)
 Bureaucrat::~Bureaucrat()
 {
     std::cout << "Bureaucrat " << name << " destroyed" << std::endl;
+}
+
+// Exceptions
+const char *Bureaucrat::GradeTooHighException::what() const throw()
+{
+    return ("Bureaucrat grade is too high !");
+}
+
+const char *Bureaucrat::GradeTooLowException::what() const throw()
+{
+    return ("Bureaucrat grade is too low !");
 }
 
 // Getters
