@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FORM_HPP
-#define FORM_HPP
+#ifndef AFORM_HPP
+#define AFORM_HPP
 
 #include "../Bureaucrat/Bureaucrat.hpp"
 #include <iostream>
@@ -52,7 +52,7 @@ public:
     bool getSignStatus() const;
 
     void beSigned(const Bureaucrat &bureaucrat);
-    virtual void execute(Bureaucrat const & executor) const = 0;
+    virtual void execute(Bureaucrat const &executor) const = 0;
 };
 
 std::ostream &operator<<(std::ostream &output_stream, const AForm &form);
