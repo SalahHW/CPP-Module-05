@@ -6,7 +6,7 @@
 /*   By: sbouheni <sbouheni@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 15:14:27 by sbouheni          #+#    #+#             */
-/*   Updated: 2024/04/15 00:56:28 by sbouheni         ###   ########.fr       */
+/*   Updated: 2024/04/17 16:05:14 by sbouheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,19 +31,16 @@ public:
     Form(const Form &other);
     Form &operator=(const Form &other);
     Form(std::string name, int grade_to_sign, int grade_to_exec);
+    
+    // Exceptions
     class GradeTooHighException : public std::exception
     {
-        virtual const char *what() const throw()
-        {
-            return "Grade too high !";
-        }
+        virtual const char *what() const throw();
     };
+
     class GradeTooLowException : public std::exception
     {
-        virtual const char *what() const throw()
-        {
-            return "Grade too low !";
-        }
+        virtual const char *what() const throw();
     };
 
     const std::string getName() const;

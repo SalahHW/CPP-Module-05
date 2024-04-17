@@ -6,7 +6,7 @@
 /*   By: sbouheni <sbouheni@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 15:14:41 by sbouheni          #+#    #+#             */
-/*   Updated: 2024/04/15 00:58:37 by sbouheni         ###   ########.fr       */
+/*   Updated: 2024/04/17 16:10:49 by sbouheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,17 @@ Form::Form(std::string name, int grade_to_sign, int grade_to_exec) : name(name),
     else if (grade_to_sign > 150 || grade_to_exec > 150)
         throw Form::GradeTooLowException();
     std::cout << this->name << " form constructed" << std::endl;
+}
+
+// Exceptions
+const char *Form::GradeTooHighException::what() const throw()
+{
+    return ("bureaucrat grade is too high !");
+}
+
+const char *Form::GradeTooLowException::what() const throw()
+{
+    return ("bueaucrat grade is too low !");
 }
 
 const std::string Form::getName() const
