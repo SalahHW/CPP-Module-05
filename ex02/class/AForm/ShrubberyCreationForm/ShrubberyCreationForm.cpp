@@ -6,7 +6,7 @@
 /*   By: sbouheni <sbouheni@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 18:00:10 by sbouheni          #+#    #+#             */
-/*   Updated: 2024/04/15 18:41:13 by sbouheni         ###   ########.fr       */
+/*   Updated: 2024/04/17 04:02:33 by sbouheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,12 @@ ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &other)
     : AForm(other.getName(), other.getGradeToSign(), other.getGradeToExec()),
       target(other.target)
 {
-    std::cout << "ShrubberyCreationForm " << this->getName() << " copied" << std::endl;
+    std::cout <<  this->getName() << " copied" << std::endl;
 }
 
 ShrubberyCreationForm &ShrubberyCreationForm::operator=(const ShrubberyCreationForm &other)
 {
-    AForm::operator=(other);
-    target = other.target;
+    this->target = other.target;
     return *this;
 }
 

@@ -6,12 +6,12 @@
 /*   By: sbouheni <sbouheni@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 18:00:07 by sbouheni          #+#    #+#             */
-/*   Updated: 2024/04/17 03:34:31 by sbouheni         ###   ########.fr       */
+/*   Updated: 2024/04/17 04:04:50 by sbouheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SHRUBBERY_HPP
-#define SHRUBBERY_HPP
+#ifndef SHRUBBERY_CREATION_FORM_HPP
+#define SHRUBBERY_CREATION_FORM_HPP
 
 #include "../AForm.hpp"
 #include <fstream>
