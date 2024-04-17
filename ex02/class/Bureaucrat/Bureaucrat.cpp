@@ -6,12 +6,12 @@
 /*   By: sbouheni <sbouheni@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 12:46:46 by sbouheni          #+#    #+#             */
-/*   Updated: 2024/04/17 03:35:23 by sbouheni         ###   ########.fr       */
+/*   Updated: 2024/04/17 15:58:30 by sbouheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
-#include "../AForm/AForm.hpp"
+#include "Form.hpp"
 
 // Constructors
 Bureaucrat::Bureaucrat()
@@ -49,6 +49,17 @@ Bureaucrat::~Bureaucrat()
     std::cout << "Bureaucrat " << name << " destroyed" << std::endl;
 }
 
+// Exceptions
+const char *Bureaucrat::GradeTooHighException::what() const throw()
+{
+    return ("Bureaucrat grade is too high !");
+}
+
+const char *Bureaucrat::GradeTooLowException::what() const throw()
+{
+    return ("Bureaucrat grade is too low !");
+}
+
 // Getters
 const std::string Bureaucrat::getName() const
 {
@@ -76,7 +87,7 @@ void Bureaucrat::decrementGrade()
     std::cout << this->name << " grade have been decremented" << std::endl;
 }
 
-void Bureaucrat::signForm(AForm &form) const
+void Bureaucrat::signForm(Form &form) const
 {
     try
     {
