@@ -6,16 +6,17 @@
 /*   By: sbouheni <sbouheni@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 15:14:41 by sbouheni          #+#    #+#             */
-/*   Updated: 2024/04/15 13:43:19 by sbouheni         ###   ########.fr       */
+/*   Updated: 2024/04/17 04:06:03 by sbouheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AForm.hpp"
 
-AForm::AForm() : name("Undifined"),
-               is_signed(false),
-               grade_to_sign(1),
-               grade_to_exec(1)
+AForm::AForm()
+    : name("Undifined"),
+      is_signed(false),
+      grade_to_sign(1),
+      grade_to_exec(1)
 {
     std::cout << this->name << " form constructed" << std::endl;
 }
@@ -25,10 +26,11 @@ AForm::~AForm()
     std::cout << this->name << " form destructed" << std::endl;
 }
 
-AForm::AForm(const AForm &other) : name(other.name),
-                                is_signed(other.is_signed),
-                                grade_to_sign(other.grade_to_sign),
-                                grade_to_exec(other.grade_to_exec)
+AForm::AForm(const AForm &other)
+    : name(other.name),
+      is_signed(other.is_signed),
+      grade_to_sign(other.grade_to_sign),
+      grade_to_exec(other.grade_to_exec)
 {
     std::cout << "AForm" << this->name << " copied" << std::endl;
 }
@@ -39,10 +41,11 @@ AForm &AForm::operator=(const AForm &other)
     return *this;
 }
 
-AForm::AForm(std::string name, int grade_to_sign, int grade_to_exec) : name(name),
-                                                                     is_signed(false),
-                                                                     grade_to_sign(grade_to_sign),
-                                                                     grade_to_exec(grade_to_exec)
+AForm::AForm(std::string name, int grade_to_sign, int grade_to_exec)
+    : name(name),
+      is_signed(false),
+      grade_to_sign(grade_to_sign),
+      grade_to_exec(grade_to_exec)
 {
     if (grade_to_sign < 1 || grade_to_exec < 1)
         throw AForm::GradeTooHighException();
