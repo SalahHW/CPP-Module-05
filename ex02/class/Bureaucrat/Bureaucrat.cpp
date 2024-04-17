@@ -6,12 +6,12 @@
 /*   By: sbouheni <sbouheni@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 12:46:46 by sbouheni          #+#    #+#             */
-/*   Updated: 2024/04/17 15:58:30 by sbouheni         ###   ########.fr       */
+/*   Updated: 2024/04/17 16:21:04 by sbouheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
-#include "Form.hpp"
+#include "../AForm/AForm.hpp"
 
 // Constructors
 Bureaucrat::Bureaucrat()
@@ -87,7 +87,7 @@ void Bureaucrat::decrementGrade()
     std::cout << this->name << " grade have been decremented" << std::endl;
 }
 
-void Bureaucrat::signForm(Form &form) const
+void Bureaucrat::signForm(AForm &form) const
 {
     try
     {

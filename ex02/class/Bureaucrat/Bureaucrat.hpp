@@ -6,7 +6,7 @@
 /*   By: sbouheni <sbouheni@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 12:46:52 by sbouheni          #+#    #+#             */
-/*   Updated: 2024/04/17 15:57:14 by sbouheni         ###   ########.fr       */
+/*   Updated: 2024/04/17 16:19:59 by sbouheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include <iostream>
 #include <exception>
 
-class Form;
+class AForm;
 
 class Bureaucrat
 {
@@ -53,7 +53,7 @@ public:
 
     void incrementGrade();
     void decrementGrade();
-    void signForm(Form &form) const; 
+    void signForm(AForm &form) const; 
 };
 
 std::ostream &operator<<(std::ostream &output_stream, const Bureaucrat &bureaucrat);
