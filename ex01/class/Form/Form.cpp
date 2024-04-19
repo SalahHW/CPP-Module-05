@@ -6,7 +6,7 @@
 /*   By: sbouheni <sbouheni@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 10:43:44 by sbouheni          #+#    #+#             */
-/*   Updated: 2024/04/19 21:37:31 by sbouheni         ###   ########.fr       */
+/*   Updated: 2024/04/19 21:46:38 by sbouheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,12 @@ Form::Form(std::string const &name, int requiredGradeToSign, int requiredGradeTo
     : name(name),
       requiredGradeToSign(requiredGradeToSign),
       requiredGradeToExecute(requiredGradeToExecute),
-      isSigned(true)
+      isSigned(false)
 {
+    if (requiredGradeToSign > 150 || requiredGradeToExecute > 150)
+        throw GradeTooLowException();
+    if (requiredGradeToSign < 1 || requiredGradeToExecute < 1)
+        throw GradeTooHighException();
 }
 
 const char *Form::GradeTooHighException::what() const throw()
