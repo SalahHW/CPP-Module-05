@@ -6,23 +6,22 @@
 /*   By: sbouheni <sbouheni@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 12:46:57 by sbouheni          #+#    #+#             */
-/*   Updated: 2024/04/11 04:41:39 by sbouheni         ###   ########.fr       */
+/*   Updated: 2024/04/19 06:57:50 by sbouheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bureaucrat.hpp"
+#include "../class/Bureaucrat.hpp"
 
 int main(void)
 {
-    // Bureaucrat undefined;
-    Bureaucrat salah("Salah", 1);
-    Bureaucrat joakoeni("Joakoeni", 150);
-
-    std::cout << salah;
-    std::cout << joakoeni;
-
     try
     {
+        // Bureaucrat wrong_grade("Wrong", 195);
+        // Bureaucrat wrong_grade2("Grade", -2147483646);
+        Bureaucrat salah("Salah", 1);
+        Bureaucrat joakoeni("Joakoeni", 150);
+        std::cout << salah;
+        std::cout << joakoeni;
         joakoeni.incrementGrade();
         std::cout << joakoeni;
         salah.incrementGrade();
