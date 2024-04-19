@@ -6,7 +6,7 @@
 /*   By: sbouheni <sbouheni@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 12:46:52 by sbouheni          #+#    #+#             */
-/*   Updated: 2024/04/19 10:24:59 by sbouheni         ###   ########.fr       */
+/*   Updated: 2024/04/19 20:10:27 by sbouheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #define BUREAUCRAT_HPP
 
 #include <iostream>
+#include <string>
 #include <exception>
 
 class Bureaucrat
