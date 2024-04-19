@@ -6,14 +6,16 @@
 /*   By: sbouheni <sbouheni@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 12:46:57 by sbouheni          #+#    #+#             */
-/*   Updated: 2024/04/19 06:57:50 by sbouheni         ###   ########.fr       */
+/*   Updated: 2024/04/19 10:30:23 by sbouheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../class/Bureaucrat.hpp"
+#include "../class/Bureaucrat/Bureaucrat.hpp"
 
 int main(void)
 {
+    std::string name;
+    
     try
     {
         // Bureaucrat wrong_grade("Wrong", 195);
@@ -24,10 +26,10 @@ int main(void)
         std::cout << joakoeni;
         joakoeni.incrementGrade();
         std::cout << joakoeni;
-        salah.incrementGrade();
+        salah.decrementGrade();
         std::cout << salah;
     }
-    catch (std::exception & e)
+    catch (std::exception &e)
     {
         std::cerr << e.what() << std::endl;
     }

@@ -6,7 +6,7 @@
 /*   By: sbouheni <sbouheni@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 12:46:52 by sbouheni          #+#    #+#             */
-/*   Updated: 2024/04/19 06:29:02 by sbouheni         ###   ########.fr       */
+/*   Updated: 2024/04/19 10:24:59 by sbouheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,30 +23,25 @@ private:
     int grade;
 
 public:
-    // Constructors
     Bureaucrat();
-    Bureaucrat(const std::string &name, int grade);
-    Bureaucrat(const Bureaucrat &other);
-
-    // Assignation operator
-    Bureaucrat &operator=(const Bureaucrat &other);
-
-    // Destructor
     ~Bureaucrat();
+    Bureaucrat(Bureaucrat const &);
+    Bureaucrat &operator=(Bureaucrat const &);
+
+    Bureaucrat(std::string const &name, int grade);
 
     // Exceptions
     class GradeTooHighException : public std::exception
     {
         virtual const char *what() const throw();
     };
-
     class GradeTooLowException : public std::exception
     {
         virtual const char *what() const throw();
     };
 
     // Getters
-    const std::string getName() const;
+    std::string const &getName() const;
     int getGrade() const;
 
     void incrementGrade();
