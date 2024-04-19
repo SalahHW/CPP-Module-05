@@ -6,7 +6,7 @@
 /*   By: sbouheni <sbouheni@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 12:46:46 by sbouheni          #+#    #+#             */
-/*   Updated: 2024/04/19 13:51:14 by sbouheni         ###   ########.fr       */
+/*   Updated: 2024/04/19 21:48:55 by sbouheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,15 @@
 Bureaucrat::Bureaucrat()
     : name("Undefined"), grade(150)
 {
-    std::cout << this->name << " bureaucrat, constructed" << std::endl;
 }
 
 Bureaucrat::~Bureaucrat()
 {
-    std::cout << this->name << " bureaucrat, destructed" << std::endl;
 }
 
 Bureaucrat::Bureaucrat(Bureaucrat const &other)
     : name(other.name), grade(other.grade)
 {
-    std::cout << other.name << " bureaucrat, copied" << std::endl;
 }
 
 Bureaucrat &Bureaucrat::operator=(Bureaucrat const &other)
@@ -45,7 +42,6 @@ Bureaucrat::Bureaucrat(std::string const &name, int grade)
         throw Bureaucrat::GradeTooHighException();
     else if (grade > 150)
         throw Bureaucrat::GradeTooLowException();
-    std::cout << this->name << " bureaucrat, constructed" << std::endl;
 }
 
 // Exceptions
