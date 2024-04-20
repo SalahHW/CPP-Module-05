@@ -6,7 +6,7 @@
 /*   By: sbouheni <sbouheni@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 12:46:46 by sbouheni          #+#    #+#             */
-/*   Updated: 2024/04/20 06:24:53 by sbouheni         ###   ########.fr       */
+/*   Updated: 2024/04/20 07:35:37 by sbouheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,6 +81,20 @@ void Bureaucrat::decrementGrade()
     this->grade++;
     std::cout << this->name << " grade have been decremented to "
               << this->grade << std::endl;
+}
+
+void Bureaucrat::signForm(Form &form)
+{
+    try
+    {
+        form.beSigned(*this);
+        std::cout << name << " signed " << form.getName() << std::endl;
+    }
+    catch (std::exception &e)
+    {
+        std::cerr << name << " couldn't sign " << form.getName()
+                  << " because " << e.what() << "." << std::endl;
+    }
 }
 
 // Overloads
