@@ -6,7 +6,7 @@
 /*   By: sbouheni <sbouheni@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 10:43:44 by sbouheni          #+#    #+#             */
-/*   Updated: 2024/04/20 07:00:12 by sbouheni         ###   ########.fr       */
+/*   Updated: 2024/04/20 07:03:06 by sbouheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,10 +84,13 @@ bool Form::getSignStatus() const
 }
 
 // Functions
-void Form::beSigned(Bureaucrat const& bureaucrat)
+void Form::beSigned(Bureaucrat const &bureaucrat)
 {
     if (requiredGradeToSign < bureaucrat.getGrade())
         throw Form::GradeTooLowException();
+    isSigned = true;
+    std::cout << name << " form has been signed by "
+              << bureaucrat.getName() << " bureaucrat." << std::endl;
 }
 
 // Overloads
