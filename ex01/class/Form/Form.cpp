@@ -6,7 +6,7 @@
 /*   By: sbouheni <sbouheni@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 10:43:44 by sbouheni          #+#    #+#             */
-/*   Updated: 2024/04/20 07:03:06 by sbouheni         ###   ########.fr       */
+/*   Updated: 2024/04/20 07:41:08 by sbouheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,9 +98,9 @@ std::ostream &operator<<(std::ostream &stream, Form const &form)
 {
     stream << form.getName() << " form has a grade required to sign of "
            << form.getRequiredGradeToSign() << " and a grade required to execute of "
-           << form.getRequiredGradeToExecute() << ". The form is actually";
+           << form.getRequiredGradeToExecute() << ". The form is ";
     if (!form.getSignStatus())
-        stream << " not ";
+        stream << "not ";
     stream << "signed";
     return (stream);
 }
