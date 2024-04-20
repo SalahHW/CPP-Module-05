@@ -6,7 +6,7 @@
 /*   By: sbouheni <sbouheni@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 10:43:44 by sbouheni          #+#    #+#             */
-/*   Updated: 2024/04/20 23:20:47 by sbouheni         ###   ########.fr       */
+/*   Updated: 2024/04/20 23:37:35 by sbouheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ const char *AForm::AlreadySignedException::what() const throw()
 }
 const char *AForm::NotSignedException::what() const throw()
 {
-	return ("Form is not signed");
+    return ("Form is not signed");
 }
 
 // Getters
@@ -103,12 +103,13 @@ void AForm::beSigned(Bureaucrat const &bureaucrat)
               << bureaucrat.getName() << " bureaucrat." << std::endl;
 }
 
-void AForm::execute(Bureaucrat const & executor) const
+void AForm::execute(Bureaucrat const &executor) const
 {
-	if (!isSigned)
-		throw NotSignedException();
-	if (executor.getGrade() > requiredGradeToExecute)
-		throw GradeTooLowException();
+    if (!isSigned)
+        throw NotSignedException();
+    if (executor.getGrade() > requiredGradeToExecute)
+        throw GradeTooLowException();
+    performAction();
 }
 
 // Overloads
