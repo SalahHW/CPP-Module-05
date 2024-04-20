@@ -6,12 +6,15 @@
 /*   By: sbouheni <sbouheni@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 12:46:57 by sbouheni          #+#    #+#             */
-/*   Updated: 2024/04/20 09:27:20 by sbouheni         ###   ########.fr       */
+/*   Updated: 2024/04/20 09:41:02 by sbouheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../class/Bureaucrat/Bureaucrat.hpp"
 #include "../class/AForm/AForm.hpp"
+#include "../class/ShrubberyCreationForm/ShrubberyCreationForm.hpp"
+#include "../class/RobotomyRequestForm/RobotomyRequestForm.hpp"
+#include "../class/PresidentialPardonForm/PresidentialPardonForm.hpp"
 
 int main(void)
 {
