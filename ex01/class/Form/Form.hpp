@@ -6,7 +6,7 @@
 /*   By: sbouheni <sbouheni@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 10:43:58 by sbouheni          #+#    #+#             */
-/*   Updated: 2024/04/20 06:52:26 by sbouheni         ###   ########.fr       */
+/*   Updated: 2024/04/20 07:37:21 by sbouheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 #include "../Bureaucrat/Bureaucrat.hpp"
 #include <iostream>
 #include <exception>
+
+class Bureaucrat;
 
 class Form
 {
