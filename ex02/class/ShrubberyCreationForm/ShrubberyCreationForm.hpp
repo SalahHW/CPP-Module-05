@@ -6,7 +6,7 @@
 /*   By: sbouheni <sbouheni@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 09:32:11 by sbouheni          #+#    #+#             */
-/*   Updated: 2024/04/20 13:38:29 by sbouheni         ###   ########.fr       */
+/*   Updated: 2024/04/20 23:26:57 by sbouheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,9 @@ public:
     ~ShrubberyCreationForm();
     ShrubberyCreationForm(ShrubberyCreationForm const &);
     ShrubberyCreationForm &operator=(ShrubberyCreationForm const &);
+
+    // Functions
+    virtual void performAction() const;
 };
 
 #endif

@@ -6,19 +6,19 @@
 /*   By: sbouheni <sbouheni@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 09:37:08 by sbouheni          #+#    #+#             */
-/*   Updated: 2024/04/20 13:57:29 by sbouheni         ###   ########.fr       */
+/*   Updated: 2024/04/20 23:39:17 by sbouheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "RobotomyRequestForm.hpp"
 
 RobotomyRequestForm::RobotomyRequestForm()
-    : AForm("RobotomyRequestForm", 72, 45), target("Undefined") {}
+    : AForm("RobotomyRequestForm", 72, 45), target("Undefined target") {}
 
 RobotomyRequestForm::~RobotomyRequestForm() {}
 
 RobotomyRequestForm::RobotomyRequestForm(RobotomyRequestForm const &other)
-    : AForm(other), target("Undefined") {}
+    : AForm(other), target(other.target) {}
 
 RobotomyRequestForm &RobotomyRequestForm::operator=(RobotomyRequestForm const &other)
 {
@@ -28,4 +28,9 @@ RobotomyRequestForm &RobotomyRequestForm::operator=(RobotomyRequestForm const &o
         target = other.target;
     }
     return (*this);
+}
+
+void RobotomyRequestForm::performAction() const
+{
+    std::cout << "Robotomy..." << std::endl;
 }

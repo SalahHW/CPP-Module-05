@@ -6,7 +6,7 @@
 /*   By: sbouheni <sbouheni@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 09:32:26 by sbouheni          #+#    #+#             */
-/*   Updated: 2024/04/20 13:52:27 by sbouheni         ###   ########.fr       */
+/*   Updated: 2024/04/20 23:31:05 by sbouheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,4 +28,9 @@ ShrubberyCreationForm &ShrubberyCreationForm::operator=(ShrubberyCreationForm co
         target = other.target;
     }
     return (*this);
+}
+
+void ShrubberyCreationForm::performAction() const
+{
+    std::cout << "ASCII TREE LOL" << std::endl;
 }

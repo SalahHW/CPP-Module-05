@@ -6,14 +6,14 @@
 /*   By: sbouheni <sbouheni@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 09:37:40 by sbouheni          #+#    #+#             */
-/*   Updated: 2024/04/20 17:21:34 by sbouheni         ###   ########.fr       */
+/*   Updated: 2024/04/20 23:38:58 by sbouheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PresidentialPardonForm.hpp"
 
 PresidentialPardonForm::PresidentialPardonForm()
-	: AForm("PresidentialPardonForm", 25, 5), target("Undefined") {}
+	: AForm("PresidentialPardonForm", 25, 5), target("Undefined target") {}
 
 PresidentialPardonForm::~PresidentialPardonForm() {}
 
@@ -28,4 +28,10 @@ PresidentialPardonForm& PresidentialPardonForm::operator=(PresidentialPardonForm
 		target = other.target;
 	}
 	return (*this);
+}
+
+// Functions
+void PresidentialPardonForm::performAction() const
+{
+	std::cout << target << " has been pardoned by Zaphod Beeblerox." << std::endl;	
 }

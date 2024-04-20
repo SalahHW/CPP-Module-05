@@ -6,7 +6,7 @@
 /*   By: sbouheni <sbouheni@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 09:35:28 by sbouheni          #+#    #+#             */
-/*   Updated: 2024/04/20 13:49:37 by sbouheni         ###   ########.fr       */
+/*   Updated: 2024/04/20 23:29:47 by sbouheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,9 @@ public:
     ~RobotomyRequestForm();
     RobotomyRequestForm(RobotomyRequestForm const &);
     RobotomyRequestForm &operator=(RobotomyRequestForm const &);
+
+    // Functions
+    virtual void performAction() const;
 };
 
 #endif
