@@ -6,7 +6,7 @@
 /*   By: sbouheni <sbouheni@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 10:43:44 by sbouheni          #+#    #+#             */
-/*   Updated: 2024/04/19 21:46:38 by sbouheni         ###   ########.fr       */
+/*   Updated: 2024/04/20 06:43:35 by sbouheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ Form::Form(std::string const &name, int requiredGradeToSign, int requiredGradeTo
         throw GradeTooHighException();
 }
 
+// Exceptions
 const char *Form::GradeTooHighException::what() const throw()
 {
     return ("Form grade is too high");
@@ -61,6 +62,7 @@ const char *Form::GradeTooLowException::what() const throw()
     return ("Form grade is too low");
 }
 
+// Getters
 std::string const &Form::getName() const
 {
     return (this->name);
@@ -81,6 +83,7 @@ bool Form::getSignStatus() const
     return (this->isSigned);
 }
 
+// Overloads
 std::ostream &operator<<(std::ostream &stream, Form const &form)
 {
     stream << form.getName() << " form has a grade required to sign of "
