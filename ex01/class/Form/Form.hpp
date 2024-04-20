@@ -6,7 +6,7 @@
 /*   By: sbouheni <sbouheni@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 10:43:58 by sbouheni          #+#    #+#             */
-/*   Updated: 2024/04/20 07:37:21 by sbouheni         ###   ########.fr       */
+/*   Updated: 2024/04/20 08:42:30 by sbouheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,10 @@ public:
         virtual const char *what() const throw();
     };
     class GradeTooLowException : public std::exception
+    {
+        virtual const char *what() const throw();
+    };
+    class AlreadySignedException : public std::exception
     {
         virtual const char *what() const throw();
     };

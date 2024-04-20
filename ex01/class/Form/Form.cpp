@@ -6,7 +6,7 @@
 /*   By: sbouheni <sbouheni@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 10:43:44 by sbouheni          #+#    #+#             */
-/*   Updated: 2024/04/20 07:41:08 by sbouheni         ###   ########.fr       */
+/*   Updated: 2024/04/20 08:42:44 by sbouheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,10 @@ const char *Form::GradeTooLowException::what() const throw()
 {
     return ("Grade is too low");
 }
+const char *Form::AlreadySignedException::what() const throw()
+{
+    return ("Form is already signed");
+}
 
 // Getters
 std::string const &Form::getName() const
@@ -86,6 +90,8 @@ bool Form::getSignStatus() const
 // Functions
 void Form::beSigned(Bureaucrat const &bureaucrat)
 {
+    if (isSigned)
+        throw AlreadySignedException();
     if (requiredGradeToSign < bureaucrat.getGrade())
         throw Form::GradeTooLowException();
     isSigned = true;
