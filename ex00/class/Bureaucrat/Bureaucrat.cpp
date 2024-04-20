@@ -6,7 +6,7 @@
 /*   By: sbouheni <sbouheni@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 12:46:46 by sbouheni          #+#    #+#             */
-/*   Updated: 2024/04/19 21:58:48 by sbouheni         ###   ########.fr       */
+/*   Updated: 2024/04/20 06:24:53 by sbouheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,15 @@
 Bureaucrat::Bureaucrat()
     : name("Undefined"), grade(150)
 {
-    std::cout << this->name << " bureaucrat, constructed" << std::endl;
 }
 
 Bureaucrat::~Bureaucrat()
 {
-    std::cout << this->name << " bureaucrat, destructed" << std::endl;
 }
 
 Bureaucrat::Bureaucrat(Bureaucrat const &other)
     : name(other.name), grade(other.grade)
 {
-    std::cout << other.name << " bureaucrat, copied" << std::endl;
 }
 
 Bureaucrat &Bureaucrat::operator=(Bureaucrat const &other)
@@ -45,7 +42,6 @@ Bureaucrat::Bureaucrat(std::string const &name, int grade)
         throw Bureaucrat::GradeTooHighException();
     else if (grade > 150)
         throw Bureaucrat::GradeTooLowException();
-    std::cout << this->name << " bureaucrat, constructed" << std::endl;
 }
 
 // Exceptions
@@ -68,6 +64,7 @@ int Bureaucrat::getGrade() const
     return (this->grade);
 }
 
+// Functions
 void Bureaucrat::incrementGrade()
 {
     if (grade == 1)
@@ -86,6 +83,7 @@ void Bureaucrat::decrementGrade()
               << this->grade << std::endl;
 }
 
+// Overloads
 std::ostream &operator<<(std::ostream &output_stream, const Bureaucrat &bureaucrat)
 {
     output_stream << bureaucrat.getName() << ", bureaucrat grade "

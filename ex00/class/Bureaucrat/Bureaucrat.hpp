@@ -6,7 +6,7 @@
 /*   By: sbouheni <sbouheni@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 12:46:52 by sbouheni          #+#    #+#             */
-/*   Updated: 2024/04/19 10:24:59 by sbouheni         ###   ########.fr       */
+/*   Updated: 2024/04/20 06:25:28 by sbouheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,10 +44,12 @@ public:
     std::string const &getName() const;
     int getGrade() const;
 
+    //Functions
     void incrementGrade();
     void decrementGrade();
 };
 
+// Overloads
 std::ostream &operator<<(std::ostream &output_stream, const Bureaucrat &bureaucrat);
 
 #endif

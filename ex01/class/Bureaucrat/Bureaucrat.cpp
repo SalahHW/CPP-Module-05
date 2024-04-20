@@ -6,7 +6,7 @@
 /*   By: sbouheni <sbouheni@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 12:46:46 by sbouheni          #+#    #+#             */
-/*   Updated: 2024/04/19 21:48:55 by sbouheni         ###   ########.fr       */
+/*   Updated: 2024/04/20 06:24:53 by sbouheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,7 @@ int Bureaucrat::getGrade() const
     return (this->grade);
 }
 
+// Functions
 void Bureaucrat::incrementGrade()
 {
     if (grade == 1)
@@ -82,6 +83,7 @@ void Bureaucrat::decrementGrade()
               << this->grade << std::endl;
 }
 
+// Overloads
 std::ostream &operator<<(std::ostream &output_stream, const Bureaucrat &bureaucrat)
 {
     output_stream << bureaucrat.getName() << ", bureaucrat grade "
