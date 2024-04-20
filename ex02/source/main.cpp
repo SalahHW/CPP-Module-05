@@ -6,7 +6,7 @@
 /*   By: sbouheni <sbouheni@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 12:46:57 by sbouheni          #+#    #+#             */
-/*   Updated: 2024/04/20 13:41:51 by sbouheni         ###   ########.fr       */
+/*   Updated: 2024/04/20 23:18:17 by sbouheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,14 @@ int main(void)
         std::cout << salah << std::endl;
         std::cout << joakoeni << std::endl;
         std::cout << foo << std::endl;
+		try
+		{
+			zip.execute(joakoeni);
+		}
+		catch (std::exception &e)
+		{
+			std::cerr << "Can not execute form because : " << e.what() << std::endl;
+		}
         // foo.beSigned(joakoeni);
         // foo.beSigned(salah);
         joakoeni.signForm(foo);
