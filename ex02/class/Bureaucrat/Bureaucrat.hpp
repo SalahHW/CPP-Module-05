@@ -6,18 +6,18 @@
 /*   By: sbouheni <sbouheni@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 12:46:52 by sbouheni          #+#    #+#             */
-/*   Updated: 2024/04/20 07:28:55 by sbouheni         ###   ########.fr       */
+/*   Updated: 2024/04/20 09:28:23 by sbouheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef BUREAUCRAT_HPP
 #define BUREAUCRAT_HPP
 
-#include "../Form/Form.hpp"
+#include "../AForm/AForm.hpp"
 #include <iostream>
 #include <exception>
 
-class Form;
+class AForm;
 
 class Bureaucrat
 {
@@ -50,7 +50,7 @@ public:
     //Functions
     void incrementGrade();
     void decrementGrade();
-    void signForm(Form &);
+    void signForm(AForm &);
 };
 
 // Overloads

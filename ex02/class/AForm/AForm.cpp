@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Form.cpp                                           :+:      :+:    :+:   */
+/*   AForm.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sbouheni <sbouheni@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 10:43:44 by sbouheni          #+#    #+#             */
-/*   Updated: 2024/04/20 08:42:44 by sbouheni         ###   ########.fr       */
+/*   Updated: 2024/04/20 09:26:31 by sbouheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Form.hpp"
+#include "AForm.hpp"
 
-Form::Form()
+AForm::AForm()
     : name("Undefined"),
       requiredGradeToSign(1),
       requiredGradeToExecute(1),
@@ -20,9 +20,9 @@ Form::Form()
 {
 }
 
-Form::~Form() {}
+AForm::~AForm() {}
 
-Form::Form(Form const &other)
+AForm::AForm(AForm const &other)
     : name(other.name),
       requiredGradeToSign(other.requiredGradeToSign),
       requiredGradeToExecute(other.requiredGradeToExecute),
@@ -30,7 +30,7 @@ Form::Form(Form const &other)
 {
 }
 
-Form &Form::operator=(Form const &other)
+AForm &AForm::operator=(AForm const &other)
 {
     if (this != &other)
     {
@@ -39,7 +39,7 @@ Form &Form::operator=(Form const &other)
     return (*this);
 }
 
-Form::Form(std::string const &name, int requiredGradeToSign, int requiredGradeToExecute)
+AForm::AForm(std::string const &name, int requiredGradeToSign, int requiredGradeToExecute)
     : name(name),
       requiredGradeToSign(requiredGradeToSign),
       requiredGradeToExecute(requiredGradeToExecute),
@@ -52,55 +52,55 @@ Form::Form(std::string const &name, int requiredGradeToSign, int requiredGradeTo
 }
 
 // Exceptions
-const char *Form::GradeTooHighException::what() const throw()
+const char *AForm::GradeTooHighException::what() const throw()
 {
     return ("Grade is too high");
 }
 
-const char *Form::GradeTooLowException::what() const throw()
+const char *AForm::GradeTooLowException::what() const throw()
 {
     return ("Grade is too low");
 }
-const char *Form::AlreadySignedException::what() const throw()
+const char *AForm::AlreadySignedException::what() const throw()
 {
     return ("Form is already signed");
 }
 
 // Getters
-std::string const &Form::getName() const
+std::string const &AForm::getName() const
 {
     return (this->name);
 }
 
-int Form::getRequiredGradeToSign() const
+int AForm::getRequiredGradeToSign() const
 {
     return (this->requiredGradeToSign);
 }
 
-int Form::getRequiredGradeToExecute() const
+int AForm::getRequiredGradeToExecute() const
 {
     return (this->requiredGradeToExecute);
 }
 
-bool Form::getSignStatus() const
+bool AForm::getSignStatus() const
 {
     return (this->isSigned);
 }
 
 // Functions
-void Form::beSigned(Bureaucrat const &bureaucrat)
+void AForm::beSigned(Bureaucrat const &bureaucrat)
 {
     if (isSigned)
         throw AlreadySignedException();
     if (requiredGradeToSign < bureaucrat.getGrade())
-        throw Form::GradeTooLowException();
+        throw AForm::GradeTooLowException();
     isSigned = true;
     std::cout << name << " form has been signed by "
               << bureaucrat.getName() << " bureaucrat." << std::endl;
 }
 
 // Overloads
-std::ostream &operator<<(std::ostream &stream, Form const &form)
+std::ostream &operator<<(std::ostream &stream, AForm const &form)
 {
     stream << form.getName() << " form has a grade required to sign of "
            << form.getRequiredGradeToSign() << " and a grade required to execute of "

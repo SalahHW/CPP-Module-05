@@ -6,7 +6,7 @@
 /*   By: sbouheni <sbouheni@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 12:46:46 by sbouheni          #+#    #+#             */
-/*   Updated: 2024/04/20 08:44:03 by sbouheni         ###   ########.fr       */
+/*   Updated: 2024/04/20 09:28:06 by sbouheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ void Bureaucrat::decrementGrade()
               << this->grade << std::endl;
 }
 
-void Bureaucrat::signForm(Form &form)
+void Bureaucrat::signForm(AForm &form)
 {
     try
     {
