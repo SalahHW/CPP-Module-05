@@ -6,7 +6,7 @@
 /*   By: sbouheni <sbouheni@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 12:46:57 by sbouheni          #+#    #+#             */
-/*   Updated: 2024/04/20 07:09:45 by sbouheni         ###   ########.fr       */
+/*   Updated: 2024/04/20 07:38:59 by sbouheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,9 @@ int main(void)
         std::cout << salah << std::endl;
         std::cout << joakoeni << std::endl;
         std::cout << foo << std::endl;
-        foo.beSigned(joakoeni);
+        // foo.beSigned(joakoeni);
+        foo.beSigned(salah);
+        std::cout << foo << std::endl;
         joakoeni.incrementGrade();
         std::cout << joakoeni << std::endl;
         salah.decrementGrade();
