@@ -6,7 +6,7 @@
 /*   By: sbouheni <sbouheni@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 10:43:58 by sbouheni          #+#    #+#             */
-/*   Updated: 2024/04/19 21:34:04 by sbouheni         ###   ########.fr       */
+/*   Updated: 2024/04/20 06:37:19 by sbouheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 #define FORM_HPP
 
 #include <iostream>
-#include <string>
 #include <exception>
 
 class Form
