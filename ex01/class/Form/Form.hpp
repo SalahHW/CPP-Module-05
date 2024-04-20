@@ -6,13 +6,14 @@
 /*   By: sbouheni <sbouheni@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 10:43:58 by sbouheni          #+#    #+#             */
-/*   Updated: 2024/04/20 06:43:19 by sbouheni         ###   ########.fr       */
+/*   Updated: 2024/04/20 06:52:26 by sbouheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FORM_HPP
 #define FORM_HPP
 
+#include "../Bureaucrat/Bureaucrat.hpp"
 #include <iostream>
 #include <exception>
 
@@ -41,12 +42,15 @@ public:
     {
         virtual const char *what() const throw();
     };
-    
+
     // Getters
     std::string const &getName() const;
     int getRequiredGradeToSign() const;
     int getRequiredGradeToExecute() const;
     bool getSignStatus() const;
+
+    // Functions
+    void beSigned(Bureaucrat const &);
 };
 
 // Overloads
