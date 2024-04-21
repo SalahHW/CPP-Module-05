@@ -6,7 +6,7 @@
 /*   By: sbouheni <sbouheni@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 12:46:57 by sbouheni          #+#    #+#             */
-/*   Updated: 2024/04/20 23:40:00 by sbouheni         ###   ########.fr       */
+/*   Updated: 2024/04/21 06:37:51 by sbouheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,11 @@ int main(void)
         // Form wrongForm("Wrong", 134334, -23423);
         ShrubberyCreationForm bar;
         PresidentialPardonForm foo("Richard");
+        RobotomyRequestForm robot("Elias");
         salah.signForm(foo);
         foo.execute(salah);
+        salah.signForm(robot);
+        robot.execute(salah);
         // ShrubberyCreationForm zip;
         std::cout << bar << std::endl;
         salah.signForm(bar);
