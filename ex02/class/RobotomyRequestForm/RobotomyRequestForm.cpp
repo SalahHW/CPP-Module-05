@@ -6,7 +6,7 @@
 /*   By: sbouheni <sbouheni@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 09:37:08 by sbouheni          #+#    #+#             */
-/*   Updated: 2024/04/20 23:39:17 by sbouheni         ###   ########.fr       */
+/*   Updated: 2024/04/21 06:13:47 by sbouheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,10 @@ RobotomyRequestForm &RobotomyRequestForm::operator=(RobotomyRequestForm const &o
     return (*this);
 }
 
+RobotomyRequestForm::RobotomyRequestForm(std::string const &target)
+    : AForm("RobotomyRequestForm", 72, 45), target(target) {}
+
+// Functions
 void RobotomyRequestForm::performAction() const
 {
     std::cout << "Robotomy..." << std::endl;
