@@ -6,7 +6,7 @@
 /*   By: sbouheni <sbouheni@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 09:35:26 by sbouheni          #+#    #+#             */
-/*   Updated: 2024/04/20 23:47:17 by sbouheni         ###   ########.fr       */
+/*   Updated: 2024/04/21 06:19:42 by sbouheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,19 +18,19 @@
 
 class PresidentialPardonForm : public AForm
 {
-	private:
-		std::string target;
+private:
+	std::string target;
 
-	public:
-		PresidentialPardonForm();
-		~PresidentialPardonForm();
-		PresidentialPardonForm(PresidentialPardonForm const&);
-		PresidentialPardonForm& operator=(PresidentialPardonForm const&);
+public:
+	PresidentialPardonForm();
+	~PresidentialPardonForm();
+	PresidentialPardonForm(PresidentialPardonForm const &);
+	PresidentialPardonForm &operator=(PresidentialPardonForm const &);
 
-		PresidentialPardonForm(std::string const&);
+	PresidentialPardonForm(std::string const &);
 
-		// Functions
-		virtual void performAction() const;
+	// Functions
+	virtual void performAction() const;
 };
 
 #endif
