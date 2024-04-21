@@ -6,7 +6,7 @@
 /*   By: sbouheni <sbouheni@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 12:46:52 by sbouheni          #+#    #+#             */
-/*   Updated: 2024/04/20 09:28:23 by sbouheni         ###   ########.fr       */
+/*   Updated: 2024/04/21 14:08:59 by sbouheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,10 +47,11 @@ public:
     std::string const &getName() const;
     int getGrade() const;
 
-    //Functions
+    // Functions
     void incrementGrade();
     void decrementGrade();
     void signForm(AForm &);
+    void executeForm(AForm const &) const;
 };
 
 // Overloads
