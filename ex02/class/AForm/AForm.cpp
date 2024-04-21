@@ -6,7 +6,7 @@
 /*   By: sbouheni <sbouheni@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 10:43:44 by sbouheni          #+#    #+#             */
-/*   Updated: 2024/04/20 23:37:35 by sbouheni         ###   ########.fr       */
+/*   Updated: 2024/04/21 14:21:47 by sbouheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,8 +99,6 @@ void AForm::beSigned(Bureaucrat const &bureaucrat)
     if (requiredGradeToSign < bureaucrat.getGrade())
         throw AForm::GradeTooLowException();
     isSigned = true;
-    std::cout << name << " form has been signed by "
-              << bureaucrat.getName() << " bureaucrat." << std::endl;
 }
 
 void AForm::execute(Bureaucrat const &executor) const
