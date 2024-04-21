@@ -6,7 +6,7 @@
 /*   By: sbouheni <sbouheni@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 09:35:28 by sbouheni          #+#    #+#             */
-/*   Updated: 2024/04/21 06:19:12 by sbouheni         ###   ########.fr       */
+/*   Updated: 2024/04/21 06:33:01 by sbouheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 #define ROBOTOMY_REQUEST_FORM
 
 #include "../AForm/AForm.hpp"
+#include <cstdlib>
+#include <ctime>
 #include <iostream>
 
 class RobotomyRequestForm : public AForm

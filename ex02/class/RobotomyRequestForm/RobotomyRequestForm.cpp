@@ -6,7 +6,7 @@
 /*   By: sbouheni <sbouheni@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 09:37:08 by sbouheni          #+#    #+#             */
-/*   Updated: 2024/04/21 06:13:47 by sbouheni         ###   ########.fr       */
+/*   Updated: 2024/04/21 06:36:09 by sbouheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,10 @@ RobotomyRequestForm::RobotomyRequestForm(std::string const &target)
 // Functions
 void RobotomyRequestForm::performAction() const
 {
-    std::cout << "Robotomy..." << std::endl;
+    std::cout << "BrrrRRrRrRRRRRrrRrrRR..." << std::endl;
+    srand(time(0));
+    if (rand() % 2 == 0)
+        std::cout << target << " have been robotomized successfully." << std::endl;
+    else
+        std::cout << target << " robotomy failed." << std::endl;
 }
