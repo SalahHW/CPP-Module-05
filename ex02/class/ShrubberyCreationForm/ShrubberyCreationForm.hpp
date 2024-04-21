@@ -6,7 +6,7 @@
 /*   By: sbouheni <sbouheni@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 09:32:11 by sbouheni          #+#    #+#             */
-/*   Updated: 2024/04/20 23:26:57 by sbouheni         ###   ########.fr       */
+/*   Updated: 2024/04/21 06:18:01 by sbouheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 #include "../AForm/AForm.hpp"
 #include <iostream>
-
 
 class ShrubberyCreationForm : public AForm
 {
@@ -27,6 +26,8 @@ public:
     ~ShrubberyCreationForm();
     ShrubberyCreationForm(ShrubberyCreationForm const &);
     ShrubberyCreationForm &operator=(ShrubberyCreationForm const &);
+
+    ShrubberyCreationForm(std::string const &);
 
     // Functions
     virtual void performAction() const;

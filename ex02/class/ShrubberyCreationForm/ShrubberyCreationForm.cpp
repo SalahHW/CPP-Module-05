@@ -6,7 +6,7 @@
 /*   By: sbouheni <sbouheni@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 09:32:26 by sbouheni          #+#    #+#             */
-/*   Updated: 2024/04/20 23:31:05 by sbouheni         ###   ########.fr       */
+/*   Updated: 2024/04/21 06:17:56 by sbouheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,9 @@ ShrubberyCreationForm &ShrubberyCreationForm::operator=(ShrubberyCreationForm co
     }
     return (*this);
 }
+
+ShrubberyCreationForm::ShrubberyCreationForm(std::string const &target)
+    : AForm("ShrubberyCreationForm", 145, 137), target(target) {}
 
 void ShrubberyCreationForm::performAction() const
 {
