@@ -6,7 +6,7 @@
 /*   By: sbouheni <sbouheni@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 09:35:26 by sbouheni          #+#    #+#             */
-/*   Updated: 2024/04/21 06:19:42 by sbouheni         ###   ########.fr       */
+/*   Updated: 2024/04/22 18:07:26 by sbouheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ private:
 
 public:
 	PresidentialPardonForm();
-	~PresidentialPardonForm();
+	virtual ~PresidentialPardonForm();
 	PresidentialPardonForm(PresidentialPardonForm const &);
 	PresidentialPardonForm &operator=(PresidentialPardonForm const &);
 
