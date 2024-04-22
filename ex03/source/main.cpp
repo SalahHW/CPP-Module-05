@@ -6,7 +6,7 @@
 /*   By: sbouheni <sbouheni@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 12:46:57 by sbouheni          #+#    #+#             */
-/*   Updated: 2024/04/22 17:04:18 by sbouheni         ###   ########.fr       */
+/*   Updated: 2024/04/22 17:20:00 by sbouheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,13 @@ int main(void)
         Bureaucrat salah("Salah", 1);
 
         basket = richard.makeForm("ShrubberyCreationForm", "Desktop");
+        if (!basket)
+            return (1);
         std::cout << *basket << std::endl;
         // salah.signForm(*basket);
         salah.executeForm(*basket);
-        delete basket;
+        if (basket)
+            delete basket;
     }
     catch (std::exception &e)
     {
