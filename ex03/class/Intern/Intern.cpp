@@ -6,7 +6,7 @@
 /*   By: sbouheni <sbouheni@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 14:32:16 by sbouheni          #+#    #+#             */
-/*   Updated: 2024/04/22 16:57:41 by sbouheni         ###   ########.fr       */
+/*   Updated: 2024/04/22 17:09:07 by sbouheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ Intern &Intern::operator=(Intern const &other)
 }
 
 // Exceptions
-const char *Intern::NonExistingFormException::what() const throw()
+const char *Intern::NotFoundFormException::what() const throw()
 {
     return ("Form doesn't exist");
 }
@@ -57,7 +57,7 @@ AForm *Intern::makePresidentialPardonForm(std::string const &target)
 void Intern::validFormName(std::string const &name)
 {
     if (formMap.find(name) == formMap.end())
-        throw NonExistingFormException();
+        throw NotFoundFormException();
 }
 
 // Functions

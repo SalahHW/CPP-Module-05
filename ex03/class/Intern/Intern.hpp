@@ -6,7 +6,7 @@
 /*   By: sbouheni <sbouheni@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 14:32:13 by sbouheni          #+#    #+#             */
-/*   Updated: 2024/04/22 16:43:38 by sbouheni         ###   ########.fr       */
+/*   Updated: 2024/04/22 17:09:18 by sbouheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ public:
     Intern &operator=(Intern const &);
 
     // Exceptions
-    class NonExistingFormException : public std::exception
+    class NotFoundFormException : public std::exception
     {
         const char *what() const throw();
     };
