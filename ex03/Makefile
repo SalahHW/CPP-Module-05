@@ -6,7 +6,7 @@
 #    By: sbouheni <sbouheni@student.42mulhouse.fr>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/23 12:47:01 by sbouheni          #+#    #+#              #
-#    Updated: 2024/04/20 09:39:17 by sbouheni         ###   ########.fr        #
+#    Updated: 2024/04/22 16:48:32 by sbouheni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,7 @@ SRCS					=	source/main.cpp													\
 							class/ShrubberyCreationForm/ShrubberyCreationForm.cpp			\
 							class/RobotomyRequestForm/RobotomyRequestForm.cpp				\
 							class/PresidentialPardonForm/PresidentialPardonForm.cpp			\
+							class/Intern/Intern.cpp
 							
 
 OBJS					=	$(SRCS:.cpp=.o)
