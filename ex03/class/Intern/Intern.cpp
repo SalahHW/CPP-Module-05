@@ -6,7 +6,7 @@
 /*   By: sbouheni <sbouheni@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 14:32:16 by sbouheni          #+#    #+#             */
-/*   Updated: 2024/04/22 17:09:07 by sbouheni         ###   ########.fr       */
+/*   Updated: 2024/04/22 18:16:20 by sbouheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,14 @@ Intern::Intern()
 
 Intern::~Intern() {}
 
-Intern::Intern(Intern const &other) 
-{
-    (void) other;
-}
+Intern::Intern(Intern const &other) : formMap(other.formMap) {}
 
-Intern &Intern::operator=(Intern const &other) 
+Intern &Intern::operator=(Intern const &other)
 {
-    (void) other;
+    if (this != &other)
+    {
+        this->formMap = other.formMap;
+    }
     return (*this);
 }
 
@@ -69,7 +69,7 @@ AForm *Intern::makeForm(std::string const &name, std::string const &target)
         std::cout << "Intern creates " << name << std::endl;
         return ((this->*(formMap[name]))(target));
     }
-    catch(const std::exception& e)
+    catch (const std::exception &e)
     {
         std::cerr << "Intern can't create " << name << " because : " << e.what() << std::endl;
         return (NULL);
