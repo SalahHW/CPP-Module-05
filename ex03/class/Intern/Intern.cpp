@@ -6,7 +6,7 @@
 /*   By: sbouheni <sbouheni@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 14:32:16 by sbouheni          #+#    #+#             */
-/*   Updated: 2024/04/22 18:16:20 by sbouheni         ###   ########.fr       */
+/*   Updated: 2024/04/23 19:20:11 by sbouheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,36 @@
 
 Intern::Intern()
 {
-    formMap["ShrubberyCreationForm"] = &Intern::makeShrubberyCreationForm;
-    formMap["RobotomyRequestForm"] = &Intern::makeRobotomyRequestForm;
-    formMap["PresidentialPardonForm"] = &Intern::makePresidentialPardonForm;
+    formNames[0] = "ShrubberyCreationForm";
+    formNames[1] = "RobotomyRequestForm";
+    formNames[2] = "PresidentialPardonForm";
+    formCreationFunctions[0] = &Intern::makeShrubberyCreationForm;
+    formCreationFunctions[1] = &Intern::makeRobotomyRequestForm;
+    formCreationFunctions[2] = &Intern::makePresidentialPardonForm;
 }
 
 Intern::~Intern() {}
 
-Intern::Intern(Intern const &other) : formMap(other.formMap) {}
+Intern::Intern(Intern const &other)
+{
+    formNames[0] = other.formNames[0];
+    formNames[1] = other.formNames[1];
+    formNames[2] = other.formNames[2];
+    formCreationFunctions[0] = other.formCreationFunctions[0];
+    formCreationFunctions[1] = other.formCreationFunctions[1];
+    formCreationFunctions[2] = other.formCreationFunctions[2];
+}
 
 Intern &Intern::operator=(Intern const &other)
 {
     if (this != &other)
     {
-        this->formMap = other.formMap;
+        formNames[0] = other.formNames[0];
+        formNames[1] = other.formNames[1];
+        formNames[2] = other.formNames[2];
+        formCreationFunctions[0] = other.formCreationFunctions[0];
+        formCreationFunctions[1] = other.formCreationFunctions[1];
+        formCreationFunctions[2] = other.formCreationFunctions[2];
     }
     return (*this);
 }
@@ -54,20 +70,25 @@ AForm *Intern::makePresidentialPardonForm(std::string const &target)
     return (new PresidentialPardonForm(target));
 }
 
-void Intern::validFormName(std::string const &name)
+int Intern::getFormId(std::string const &name)
 {
-    if (formMap.find(name) == formMap.end())
-        throw NotFoundFormException();
+    for (int i = 0; i < formCount; i++)
+    {
+        if (formNames[i] == name)
+            return (i);
+    }
+    throw NotFoundFormException();
 }
 
 // Functions
 AForm *Intern::makeForm(std::string const &name, std::string const &target)
 {
+    int id;
     try
     {
-        validFormName(name);
+        id = getFormId(name);
         std::cout << "Intern creates " << name << std::endl;
-        return ((this->*(formMap[name]))(target));
+        return ((this->*formCreationFunctions[id])(target));
     }
     catch (const std::exception &e)
     {

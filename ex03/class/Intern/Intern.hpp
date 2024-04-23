@@ -6,7 +6,7 @@
 /*   By: sbouheni <sbouheni@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 14:32:13 by sbouheni          #+#    #+#             */
-/*   Updated: 2024/04/22 17:09:18 by sbouheni         ###   ########.fr       */
+/*   Updated: 2024/04/23 19:15:40 by sbouheni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,18 +19,19 @@
 #include "../PresidentialPardonForm/PresidentialPardonForm.hpp"
 #include <exception>
 #include <iostream>
-#include <map>
 
 class Intern
 {
 private:
-    std::map<std::string, AForm *(Intern::*)(std::string const &)> formMap;
+    static const int formCount = 3;
+    std::string formNames[formCount];
+    AForm *(Intern::*formCreationFunctions[formCount])(std::string const&);
 
     // Functions
     AForm *makeShrubberyCreationForm(std::string const &target);
     AForm *makeRobotomyRequestForm(std::string const &target);
     AForm *makePresidentialPardonForm(std::string const &target);
-    void validFormName(std::string const &name);
+    int getFormId(std::string const &name);
 
 public:
     Intern();
